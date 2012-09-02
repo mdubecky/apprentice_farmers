@@ -1,0 +1,269 @@
+<%= form_for(@apprentice) do |f| %>
+  <% if @apprentice.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@apprentice.errors.count, "error") %> prohibited this apprentice from being saved:</h2>
+
+      <ul>
+      <% @apprentice.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :street %><br />
+    <%= f.text_field :street %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br />
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :state %><br />
+    <%= f.text_field :state %>
+  </div>
+  <div class="field">
+    <%= f.label :zip %><br />
+    <%= f.text_field :zip %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br />
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :gender %><br />
+    <%= f.text_field :gender %>
+  </div>
+  <div class="field">
+    <%= f.label :age %><br />
+    <%= f.number_field :age %>
+  </div>
+  <div class="field">
+    <%= f.label :start_date %><br />
+    <%= f.date_select :start_date %>
+  </div>
+  <div class="field">
+    <%= f.label :end_date %><br />
+    <%= f.date_select :end_date %>
+  </div>
+  <div class="field">
+    <%= f.label :room_and_board %><br />
+    <%= f.number_field :room_and_board %>
+  </div>
+  <div class="field">
+    <%= f.label :fairfield %><br />
+    <%= f.check_box :fairfield %>
+  </div>
+  <div class="field">
+    <%= f.label :hartford %><br />
+    <%= f.check_box :hartford %>
+  </div>
+  <div class="field">
+    <%= f.label :litchfield %><br />
+    <%= f.check_box :litchfield %>
+  </div>
+  <div class="field">
+    <%= f.label :middlesex %><br />
+    <%= f.check_box :middlesex %>
+  </div>
+  <div class="field">
+    <%= f.label :newhaven %><br />
+    <%= f.check_box :newhaven %>
+  </div>
+  <div class="field">
+    <%= f.label :newlondon %><br />
+    <%= f.check_box :newlondon %>
+  </div>
+  <div class="field">
+    <%= f.label :tolland %><br />
+    <%= f.check_box :tolland %>
+  </div>
+  <div class="field">
+    <%= f.label :windham %><br />
+    <%= f.check_box :windham %>
+  </div>
+  <div class="field">
+    <%= f.label :interview %><br />
+    <%= f.check_box :interview %>
+  </div>
+  <div class="field">
+    <%= f.label :only_apprentice %><br />
+    <%= f.number_field :only_apprentice %>
+  </div>
+  <div class="field">
+    <%= f.label :housing_details %><br />
+    <%= f.text_area :housing_details %>
+  </div>
+  <div class="field">
+    <%= f.label :commitment %><br />
+    <%= f.number_field :commitment %>
+  </div>
+  <div class="field">
+    <%= f.label :schedule %><br />
+    <%= f.text_area :schedule %>
+  </div>
+  <div class="field">
+    <%= f.label :transportation %><br />
+    <%= f.check_box :transportation %>
+  </div>
+  <div class="field">
+    <%= f.label :manual_transmission %><br />
+    <%= f.check_box :manual_transmission %>
+  </div>
+  <div class="field">
+    <%= f.label :why_apprentice %><br />
+    <%= f.text_area :why_apprentice %>
+  </div>
+  <div class="field">
+    <%= f.label :csa %><br />
+    <%= f.check_box :csa %>
+  </div>
+  <div class="field">
+    <%= f.label :dairy %><br />
+    <%= f.check_box :dairy %>
+  </div>
+  <div class="field">
+    <%= f.label :diversified %><br />
+    <%= f.check_box :diversified %>
+  </div>
+  <div class="field">
+    <%= f.label :farm_to_institution %><br />
+    <%= f.check_box :farm_to_institution %>
+  </div>
+  <div class="field">
+    <%= f.label :field_crops %><br />
+    <%= f.check_box :field_crops %>
+  </div>
+  <div class="field">
+    <%= f.label :livestock %><br />
+    <%= f.check_box :livestock %>
+  </div>
+  <div class="field">
+    <%= f.label :orchard %><br />
+    <%= f.check_box :orchard %>
+  </div>
+  <div class="field">
+    <%= f.label :organic %><br />
+    <%= f.check_box :organic %>
+  </div>
+  <div class="field">
+    <%= f.label :upick %><br />
+    <%= f.check_box :upick %>
+  </div>
+  <div class="field">
+    <%= f.label :vegetables %><br />
+    <%= f.check_box :vegetables %>
+  </div>
+  <div class="field">
+    <%= f.label :community_farm %><br />
+    <%= f.check_box :community_farm %>
+  </div>
+  <div class="field">
+    <%= f.label :other %><br />
+    <%= f.check_box :other %>
+  </div>
+  <div class="field">
+    <%= f.label :farm_experience %><br />
+    <%= f.number_field :farm_experience %>
+  </div>
+  <div class="field">
+    <%= f.label :work_experience %><br />
+    <%= f.text_area :work_experience %>
+  </div>
+  <div class="field">
+    <%= f.label :led_to_work %><br />
+    <%= f.text_area :led_to_work %>
+  </div>
+  <div class="field">
+    <%= f.label :interest_in_apprentice %><br />
+    <%= f.text_area :interest_in_apprentice %>
+  </div>
+  <div class="field">
+    <%= f.label :prepared %><br />
+    <%= f.text_area :prepared %>
+  </div>
+  <div class="field">
+    <%= f.label :what_you_bring %><br />
+    <%= f.text_area :what_you_bring %>
+  </div>
+  <div class="field">
+    <%= f.label :references %><br />
+    <%= f.text_area :references %>
+  </div>
+  <div class="field">
+    <%= f.label :bedroom_sharing %><br />
+    <%= f.check_box :bedroom_sharing %>
+  </div>
+  <div class="field">
+    <%= f.label :bathroom_sharing %><br />
+    <%= f.check_box :bathroom_sharing %>
+  </div>
+  <div class="field">
+    <%= f.label :rooming_needs %><br />
+    <%= f.text_area :rooming_needs %>
+  </div>
+  <div class="field">
+    <%= f.label :smoker %><br />
+    <%= f.check_box :smoker %>
+  </div>
+  <div class="field">
+    <%= f.label :food_restrictions %><br />
+    <%= f.text_area :food_restrictions %>
+  </div>
+  <div class="field">
+    <%= f.label :three_things %><br />
+    <%= f.text_area :three_things %>
+  </div>
+  <div class="field">
+    <%= f.label :heard_about %><br />
+    <%= f.text_area :heard_about %>
+  </div>
+  <div class="field">
+    <%= f.label :ctnofa_member %><br />
+    <%= f.check_box :ctnofa_member %>
+  </div>
+  <div class="field">
+    <%= f.label :agreement_a %><br />
+    <%= f.check_box :agreement_a %>
+  </div>
+  <div class="field">
+    <%= f.label :agreement_b %><br />
+    <%= f.check_box :agreement_b %>
+  </div>
+  <div class="field">
+    <%= f.label :agreement_c %><br />
+    <%= f.check_box :agreement_c %>
+  </div>
+  <div class="field">
+    <%= f.label :agreement_d %><br />
+    <%= f.check_box :agreement_d %>
+  </div>
+  <div class="field">
+    <%= f.label :agreement_e %><br />
+    <%= f.check_box :agreement_e %>
+  </div>
+  <div class="field">
+    <%= f.label :username %><br />
+    <%= f.text_field :username %>
+  </div>
+  <div class="field">
+    <%= f.label :password %><br />
+    <%= f.text_field :password %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

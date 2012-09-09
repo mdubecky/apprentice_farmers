@@ -11,6 +11,8 @@
     </div>
   <% end %>
 
+  <strong>Contact Info</strong><br /><br />
+
   <div class="field">
     <%= f.label :first_name %><br />
     <%= f.text_field :first_name %>
@@ -51,6 +53,11 @@
     <%= f.label :age %><br />
     <%= f.number_field :age %>
   </div>
+  <br />
+  <strong>Availability and Housing</strong><br /><br />
+
+  Availability - Desired Working Dates*
+  <br /><br />
   <div class="field">
     <%= f.label :start_date %><br />
     <%= f.date_select :start_date %>
@@ -63,6 +70,9 @@
     <%= f.label :room_and_board %><br />
     <%= f.number_field :room_and_board %>
   </div>
+  <br />
+  Willing to work at farms in the following counties*:
+  <br /><br />
   <div class="field">
     <%= f.label :fairfield %><br />
     <%= f.check_box :fairfield %>
@@ -80,11 +90,11 @@
     <%= f.check_box :middlesex %>
   </div>
   <div class="field">
-    <%= f.label :newhaven %><br />
+    New Haven<br />
     <%= f.check_box :newhaven %>
   </div>
   <div class="field">
-    <%= f.label :newlondon %><br />
+    New London<br />
     <%= f.check_box :newlondon %>
   </div>
   <div class="field">
@@ -95,38 +105,58 @@
     <%= f.label :windham %><br />
     <%= f.check_box :windham %>
   </div>
+  <br />
+  Would you be willing to go to a farm for an interview?
+  <br /><br />
   <div class="field">
-    <%= f.label :interview %><br />
+    Yes
     <%= f.check_box :interview %>
   </div>
+  <br />
+  Are you comfortable being the only apprentice on a farm?
+  <br /><br />
   <div class="field">
     <%= f.label :only_apprentice %><br />
     <%= f.number_field :only_apprentice %>
   </div>
+  <br />
+  Explain any other details about your needs for housing, board, and willingness to travel to and from farms (For example, how far you would be willing to travel to a farm, flexibility about living at home or on-farm, etc.)
+  <br /><br />
   <div class="field">
     <%= f.label :housing_details %><br />
     <%= f.text_area :housing_details %>
   </div>
+  <br />
+  My desired time commitment is:
+  <br /><br />
   <div class="field">
     <%= f.label :commitment %><br />
     <%= f.number_field :commitment %>
   </div>
+  <br />
+  Please specify your desired schedule* (fulltime, living on farm, mornings only, weekend, weekdays, etc.)
+  <br /><br />
   <div class="field">
     <%= f.label :schedule %><br />
     <%= f.text_area :schedule %>
   </div>
   <div class="field">
-    <%= f.label :transportation %><br />
+    Do you have your own means of transportation?<br />
     <%= f.check_box :transportation %>
   </div>
   <div class="field">
-    <%= f.label :manual_transmission %><br />
+    Can you drive a manual transimssion?<br />
     <%= f.check_box :manual_transmission %>
   </div>
+  <br />
+  <strong>Farm Experience and Interest</strong><br /><br />
   <div class="field">
-    <%= f.label :why_apprentice %><br />
+    Why are you seeking an apprenticeship on an organic farm in Connecticut?<br />
     <%= f.text_area :why_apprentice %>
   </div>
+  <br />
+  Choose the types of farms you are interested in working on:
+  <br /><br />
   <div class="field">
     <%= f.label :csa %><br />
     <%= f.check_box :csa %>
@@ -176,27 +206,27 @@
     <%= f.check_box :other %>
   </div>
   <div class="field">
-    <%= f.label :farm_experience %><br />
+    Please describe your farm experience:<br />
     <%= f.number_field :farm_experience %>
   </div>
   <div class="field">
-    <%= f.label :work_experience %><br />
+    Provide a brief summary of your work experience, both paid and volunteer, on and off far, within the past 5-8 years<br />
     <%= f.text_area :work_experience %>
   </div>
   <div class="field">
-    <%= f.label :led_to_work %><br />
+    What has led you to want to work and/or learn on a farm?<br />
     <%= f.text_area :led_to_work %>
   </div>
   <div class="field">
-    <%= f.label :interest_in_apprentice %><br />
+    Explain your interest in being an apprentice and how this traning will fit into future plans.<br />
     <%= f.text_area :interest_in_apprentice %>
   </div>
   <div class="field">
-    <%= f.label :prepared %><br />
+    Are you prepared for a job that can require repetitive, uncomfortable and/or strenuous tasks? Discuss any challenging physical activity done in recent years. Please explain any relevant medical conditions, physical limitations, emotional or psychological issues that will affect your ability to do farm work.<br />
     <%= f.text_area :prepared %>
   </div>
   <div class="field">
-    <%= f.label :what_you_bring %><br />
+    Use this space to tell potential host farmers more about yourself and what you bring to a working and living situation.<br />
     <%= f.text_area :what_you_bring %>
   </div>
   <div class="field">

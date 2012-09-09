@@ -7,10 +7,21 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div id="container">
+<div class="container">
 
-<%= yield %>
-
+  <div class="row">
+    <%= render :partial => 'global/header' %>
   </div>
+
+  <div class="row">
+    <%= render :partial => 'global/sidebar' %>
+    <%= yield %>
+  </div>
+
+  <div class="row">
+    <%= render :partial => 'global/footer' %>
+  </div>
+
+</div>
 </body>
 </html>

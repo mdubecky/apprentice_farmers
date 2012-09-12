@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ApprenticeFarmers</title>
+  <title><%= @page.title || @home.title %></title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-<div class="container">
+<body class="container">
 
-  <div class="row">
-    <%= render :partial => 'global/header' %>
-  </div>
+  <header class="row">
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+    <nav><% render partial: 'shared/nav' %></nav>
+    <%= yield :header %>
+  </header>
 
-  <div class="row">
-    <%= render :partial => 'global/sidebar' %>
+  <aside>
+    <%= yield :sidebar %>
+  </aside>
+
+  <div role="main">
     <%= yield %>
   </div>
 
-  <div class="row">
-    <%= render :partial => 'global/footer' %>
-  </div>
+  <footer class="row">
+    <%= render partial: 'shared/footer' %>
+  </footer>
 
-</div>
 </body>
 </html>

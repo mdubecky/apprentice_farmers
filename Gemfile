@@ -1,26 +1,41 @@
 source 'https://rubygems.org'
 
+<<<<<<< HEAD
 gem 'rails', '3.2.2'
 gem 'bootstrap-sass', '2.0.4'
+=======
+gem 'rails', '3.2.8'
+>>>>>>> a7bd54c407fe2857012c1c86f5d1b341d1ab0287
 
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
+gem 'devise'
+gem 'jquery-rails'
+gem 'mysql2'
+gem 'rack'
+gem 'rack-cache', :require => 'rack/cache'
+gem 'will_paginate'
 
-gem 'sqlite3'
+group :test do
+  gem 'cucumber-rails'
+  gem 'factory_girl_rails'
+  gem 'database_cleaner'
+  gem 'rspec-rails'
+end
 
+group :development do
+  gem 'annotate', :git => 'git://github.com/jeremyolliver/annotate_models.git', :branch => 'rake_compatibility'
+  gem 'capistrano'
+  gem 'debugger'
+  gem 'rails_best_practices'
+  gem 'thin'
+  gem 'pry'
+end
 
-# Gems used only for assets and not required
-# in production environments by default.
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
-
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer'
-
   gem 'uglifier', '>= 1.0.3'
 end
 
+<<<<<<< HEAD
 gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
@@ -37,3 +52,5 @@ gem 'capistrano'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
+=======
+>>>>>>> a7bd54c407fe2857012c1c86f5d1b341d1ab0287

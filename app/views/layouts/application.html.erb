@@ -1,14 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ApprenticeFarmers</title>
+  <title><%= @page.title || @home.title %></title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
+<<<<<<< HEAD
 <body>
 <%= image_tag("ctnofa_logo.jpg") %>
 <%= yield %>
+=======
+<body class="container">
+
+  <header class="row">
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+    <nav><% render partial: 'shared/nav' %></nav>
+    <%= yield :header %>
+  </header>
+
+  <aside>
+    <%= yield :sidebar %>
+  </aside>
+
+  <div role="main">
+    <%= yield %>
+  </div>
+
+  <footer class="row">
+    <%= render partial: 'shared/footer' %>
+  </footer>
+>>>>>>> a7bd54c407fe2857012c1c86f5d1b341d1ab0287
 
 </body>
 </html>
